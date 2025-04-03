@@ -86,7 +86,8 @@ const Select: React.FC<SelectProps> = ({ onChange, defaultValue }) => {
             onChange={handleSelectChange}
             className="image-select w-full text-foreground border border-foreground-light/20 py-4 px-4 transition-all duration-300 rounded-2xl cursor-pointer">
             <button className='w-full flex items-center gap-6 justify-between cursor-pointer'>
-              <selectedcontent className="flex items-center gap-6"></selectedcontent>
+                {/* @ts-expect-error - custom element not recognized by TypeScript*/}
+                <selectedcontent className="flex items-center gap-6"></selectedcontent>
               <span className='arrow transition-all duration-300'>
                 <ChevronDown size={24} />
               </span>
